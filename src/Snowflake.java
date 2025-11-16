@@ -3,7 +3,7 @@
 
 class Snowflake {
     // ONLY THE DRAW METHOD IS INCLUDED. YOU MUST FINISH THE REST.
-  
+  //These instance variables were added 
     private Sketch s;
 private float radius;
 private float x;
@@ -14,7 +14,7 @@ private int fillColor;
 private int borderColor;
 
 
-
+//Costructor added to initialize radius of the snowflake and other things like that just like bubble and ball.
     public Snowflake(Sketch sketch, float radius, float x, float y, float xspeed, float yspeed) {
         this.s = sketch;
         this.radius = radius;

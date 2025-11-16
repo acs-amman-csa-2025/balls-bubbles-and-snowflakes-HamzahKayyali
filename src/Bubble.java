@@ -2,7 +2,7 @@
 class Bubble {
 
 
-    //MISSING MANY INSTANCE VARIABLES
+    //these instance variables were missing and were needed as part of the code.
 private Sketch s;
 private float radius;
 private float x;
@@ -11,7 +11,8 @@ private float xSpeed;
 private float ySpeed;
 private int fillColor;
 private int borderColor;
-    //MISSING CONSTRUCTORS
+    //These constructors were added from the missing code to initialize the bubbles speeds and things like that just like the ball
+    //constructor
 public Bubble(Sketch sketch) {
         s = sketch;
         radius = 20;

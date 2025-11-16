@@ -2,8 +2,7 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 
-    /** Represents one ball */
-
+//these create each ball, bubble, snowflake
     private Ball ball1;
     private Ball ball2;
     private Ball ball3;
@@ -28,27 +27,26 @@ public class Sketch extends PApplet {
         size(500, 500);
     }
 
-    /**
-     * Runs once at the beginning of the program, after the window is created. Use
-     * this to initialize the sketch.
-     */
+    //This code is when I make a new ball in the world, decide their widths, length, speeds, etc.
     public void setup() {
         ball1 = new Ball(this, 50, 100, 100, 1, 1);
         ball2 = new Ball(this, 25, 25, 32, 2, 2);
         ball3 = new Ball(this, 20, 300, 300, 5, 5);
         ball4 = new Ball(this, 10, 15, 25, 6, 7);
-        ball1.setColors(color(255,0,0), 0);
-        ball2.setColors(color(0,255,0), 0);
-        ball3.setColors(color(0,0,255), 0);
-        ball4.setColors(color(255,234,100), 0);
+        //This code makes the colors of the ball I made the colors of my balls random.
+        ball1.setColors(color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256)),(int)(Math.random()*256));
+        ball2.setColors(color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256)),(int)(Math.random()*256));
+        ball3.setColors(color((int)(Math.random()*256),(int)(Math.random()*256),(int)Math.random()*256), (int)Math.random()*256);
+        ball4.setColors(color((int)(Math.random()*256),(int)(Math.random()*256),(int)Math.random()*256), (int)(Math.random()*256));
 
      
-
+//This is the same code as the balls to put it in the world
         bubble1 = new Bubble(this, 38, 34, 400, 2, 2);
         bubble2 = new Bubble(this, 34, 100, 125, 2, 2);
         bubble3 = new Bubble(this, 45, 67, 382, 3, 2);
         bubble4 = new Bubble(this, 34, 66, 180, 1, 2);
         
+    //This is the same as bubbles and balls
         snowflake1 = new Snowflake(this, 39, 345, 200, 2, 2);
         snowflake2 = new Snowflake(this, 50, 400, 200, 2, 2);
         snowflake3 = new Snowflake(this, 39, 25, 200, 2, 2);
