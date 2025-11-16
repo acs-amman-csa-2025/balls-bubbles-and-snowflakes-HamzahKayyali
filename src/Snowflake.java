@@ -1,9 +1,60 @@
-/** THE ENTIRE CLASS IS INSIDE A COMMENT RIGHT NOW. TO ENABLE THE CLASS, 
- * DELETE THESE LINE AND THE LAST ONE IN THE FILE.
+
+
 
 class Snowflake {
     // ONLY THE DRAW METHOD IS INCLUDED. YOU MUST FINISH THE REST.
-  
+  //These instance variables were added 
+    private Sketch s;
+private float radius;
+private float x;
+private float y;
+private float xSpeed;
+private float ySpeed;
+private int fillColor;
+private int borderColor;
+
+
+//Costructor added to initialize radius of the snowflake and other things like that just like bubble and ball.
+    public Snowflake(Sketch sketch, float radius, float x, float y, float xspeed, float yspeed) {
+        this.s = sketch;
+        this.radius = radius;
+        this.x = x;
+        this.y = y;
+        this.xSpeed = xspeed;
+        this.ySpeed = -yspeed;
+          fillColor = s.color(255, 255, 255,50);
+        borderColor = s.color(0, 0, 0);
+    }
+    // accessors for the radius, diameter, x, and y values 
+    public float getRadius() {
+        return radius;
+    }
+
+    public float getDiameter() {
+        return radius * 2;
+    }
+
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+     public void move() {
+        x = x + xSpeed;
+        y = y + -ySpeed;
+        if (x > s.width - radius) {
+            x = radius;
+        } else if(x < radius) {
+            x = s.width - radius;
+        } else if (y > s.height - radius) {
+            y = radius;
+        } else if (y < radius) {
+            y = s.height - radius;
+        }
+    }
 
     public void draw() {
         s.line(x + radius, y, x - radius, y);
@@ -15,4 +66,3 @@ class Snowflake {
     }
 }
 
-**/
